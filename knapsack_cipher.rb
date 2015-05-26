@@ -74,7 +74,7 @@ class KnapsackCipher
     cipherarray.each do |x|
       secret_number = (x*inverse_mod) % n
       binary =""
-      superknap.reverse.each do |c|
+      superknap.knapsack.reverse.each do |c|
          if c <= secret_number
            binary << '1'
            secret_number -= c
